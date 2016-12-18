@@ -1,0 +1,12 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+**/target/
+.idea/
+.idea/**
+**/*.iml
+*.iml
+*.log
+**/src/test/resources/application.properties
+classes/
+./classes/
+**/src/test/resources/**
+/logging/

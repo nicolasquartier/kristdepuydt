@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <title>Rudi Quartier</title>
+    <link th:href="@{../../static/css/bootstrap-3.0.3.min.css}" rel="stylesheet"/>
+    <link th:href="@{../../static/css/styles.css}" rel="stylesheet"/>
+    <link th:href="@{../../static/css/lightbox.css}" rel="stylesheet"/>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <p>Rudi Quartier</p>
+        <p class="mask" id="maskLeftUpperCorner"></p>
+        <p class="mask" id="maskLeft"></p>
+        <p class="mask" id="maskRight"></p>
+        <p class="mask" id="maskRightDownCorner"></p>
+    </div>
+</header>
+<nav>
+    <div class="container">
+        <ul>
+            <li><a class="active" href="#">foto's</a></li>
+            <li><a class="inactive" href="#about">over</a></li>
+            <li><a class="inactive" href="#exposities">exposities</a></li>
+            <li><a class="inactive" href="#contact">contact</a></li>
+        </ul>
+    </div>
+</nav>
+<section id="photos" class="photos">
+    <ul>
+        <li class="image" th:each="thumbnail : ${thumbnails}">
+            <a th:href="${thumbnail.url}" th:attr="data-lightbox=${thumbnail.description}">
+                <img th:src="${thumbnail.url}"/>
+                <div class="pHolder"><p th:text="${thumbnail.description}"></p></div>
+
+            </a>
+            <div class="extraBeelden">
+                <div class="beeld" th:each="beeld : ${thumbnail.otherBeelden}">
+                    <a th:href="${beeld}" th:attr="data-lightbox=${thumbnail.description}">
+                        <img th:src="${beeld}" th:attr="data-lightbox=${thumbnail.description}"/>
+                    </a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<section id="about" class="about">
+    <div id="aboutText">
+        <h1>Over mij</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a turpis vulputate, dapibus orci a, bibendum
+            libero. Nulla dapibus a nibh ac venenatis. Donec ornare laoreet commodo. Etiam dictum hendrerit varius. Duis
+            vehicula ultrices nunc eu laoreet. Nunc dolor odio, blandit nec arcu non, dictum maximus mauris. Nam sodales
+            at magna ac scelerisque.</p>
+        <p>Vivamus tortor turpis, efficitur sed tempus quis, rhoncus et lorem. Maecenas mauris libero, volutpat vitae
+            risus a, tincidunt auctor tortor. Cras imperdiet lacus vitae lorem vulputate, non iaculis nibh dapibus. Duis
+            convallis molestie lorem, id aliquam diam aliquam ut. Vivamus orci dolor, iaculis quis interdum et,
+            fermentum vitae dolor. In nec mattis urna. Ut viverra nibh sed odio sagittis, non iaculis lectus fermentum.
+            Etiam sit amet purus semper, maximus elit sit amet, finibus mauris. Sed lacinia nisl velit, non semper felis
+            volutpat in. Vivamus lacinia venenatis odio, ut tempus elit malesuada vel. Integer tincidunt, nibh nec
+            egestas auctor, odio leo porttitor lacus, et pellentesque quam dolor ac est.</p>
+    </div>
+    <!--<img src="/img/profile2.jpg"/>-->
+</section>
+
+<section id="exposities" class="exposities container">
+    <h1>Exposities</h1>
+    <ul>
+        <li>
+            <p class="title">Buren bij kunstenaars</p>
+            <p class="location">Torhout</p>
+            <p class="date">14-15-16 oktober 2016</p>
+            <p class="site"><a href="https://www.facebook.com/burenbijkunstenaars/?fref=ts">https://www.facebook.com/burenbijkunstenaars</a></p>
+        </li>
+        <li>
+            <p class="title">Een andere expositie</p>
+            <p class="location">Keunekappelle</p>
+            <p class="date">Mei 2017</p>
+        </li>
+        <li>
+            <p class="title">beelden expositie</p>
+            <p class="location">CC De Brouckere</p>
+            <p class="date">Augustus 2017</p>
+        </li>
+
+        <li>
+            <p class="title">expositie met andere beelden</p>
+            <p class="location">Academie Tielt</p>
+            <p class="date">December 2017</p>
+        </li>
+    </ul>
+</section>
+
+<section id="contact" class="contact">
+    <h1>contact</h1>
+    <p>Rudi Quartier</p>
+    <p>Vossebergstraat 20 8820 Torhout</p>
+    <p>rudiquartier@live.be</p>
+    <p class="facebookLink">
+        <a href="https://www.facebook.com/rudi.quartier?fref=ts" target="_blank">facebook</a>
+    </p>
+</section>
+
+<script th:src="@{/static/js/jquery-2.0.2.min.js}"></script>
+<script th:src="@{/static/js/bootstrap-3.0.3.min.js}"></script>
+<script th:src="@{/static/js/lightbox.js}"></script>
+</body>
+</html>
