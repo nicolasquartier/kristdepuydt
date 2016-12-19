@@ -30,7 +30,8 @@ public class HomeController {
     @RequestMapping(value = {"/", "/index"}, method = RequestMethod.GET)
     public String index(Model model) {
 
-        if(System.getProperty("runLocal").equals("true")) {
+        //-DrunLocal=true
+        if(System.getProperty("runLocal") != null && System.getProperty("runLocal").equals("true")) {
             Path currentRelativePath = Paths.get("");
             String currentRelativePathAsString = currentRelativePath.toAbsolutePath().toString() + "/../";
             if(!new File(mainFolder).isAbsolute()) {
