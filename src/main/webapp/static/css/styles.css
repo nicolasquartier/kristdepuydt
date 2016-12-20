@@ -1,8 +1,7 @@
 @font-face {
     font-family: 'simplifica';
     src: url('../fonts/simplifica.ttf');
-    src: url('../fonts/simplifica.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../fonts/simplifica.ttf')  format('truetype'); /* Safari, Android, iOS */
+    src: url('../fonts/simplifica.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/simplifica.ttf') format('truetype'); /* Safari, Android, iOS */
 }
 
 body {
@@ -12,74 +11,10 @@ body {
     color: #474747;
 }
 
-
-
-.container {
+body .container {
+    padding-left: 0px;
     margin: 0 auto;
     max-width: 960px;
-}
-
-header {
-    z-index: -1;
-}
-
-.header .container {
-    margin: 0 auto;
-    max-width: 960px;
-    text-align: center;;
-}
-
-.header .container p {
-    text-transform: uppercase;
-    font-size: 100px;
-    /*font-size: 6.5vw;*/
-    text-align: center;
-    border: 1px solid #000;
-    display: inline;
-    padding: 15px;
-    position: relative;
-    z-index: -2;
-}
-
-.header .container p.mask {
-    background-color: #fefefe;
-    border: none;
-    height: calc(8%);
-    position: absolute;
-    z-index: -1;
-}
-
-#maskLeftUpperCorner {
-    left: calc(1%);
-    top: calc(-3%);
-    width: 51%;
-}
-
-#maskLeft {
-    left: calc(1%);
-    top: calc(5%);
-    width: 36%;
-}
-
-#maskRight {
-    right: calc(1%);
-    top: calc(10%);
-    width: 36%;
-}
-
-#maskRightDownCorner {
-    right: calc(1%);
-    top: calc(17%);
-    width: 51%;
-}
-
-nav {
-    text-align: center;
-    font-size: 22px;
-    position: relative;
-    top:20px;
-    font-weight: 100;
-    height: 70px;
 }
 
 a {
@@ -87,48 +22,29 @@ a {
     color: #474747;
 }
 
-ul {
-    padding: 0;
-    margin:0;
-}
-
-nav ul li {
-    text-transform: uppercase;
-    list-item:none;
-    display:inline;
-    margin: 5px;
-    padding: 10px 15px;
-}
-
-nav ul li  a.active{
-    color: #989898;
-}
-
-nav ul li  a.active:hover{
+body a:hover {
     text-decoration: none;
 }
 
-nav ul li a.inactive:hover {
-    color: #989898;
-    cursor:pointer;
-    /*background-color: black;*/
-    -moz-transition: color .5s ease-in;
-    -o-transition: color .5s ease-in;
-    -webkit-transition: color .5s ease-in;
-    transition: color .5s ease-in;
+body a:visited {
+    text-decoration: none;
 }
 
+ul {
+    padding: 0;
+    margin: 0;
+}
 
 .photos {
 
 }
 
 .photos ul li.image {
-    float:left;
+    float: left;
     list-style: none;
-    margin:0 0 0 -2px;
-    padding:0;
-    width:calc(25%);
+    margin: 0 0 0 -2px;
+    padding: 0;
+    width: calc(25%);
     z-index: 2;
     position: relative;
 }
@@ -140,20 +56,20 @@ nav ul li a.inactive:hover {
     text-align: center;
     text-transform: uppercase;
     width: 100%;
-    top:calc(45%);
+    top: calc(45%);
     font-weight: bolder;
-    font-size:35px;
-    opacity:0;
+    font-size: 35px;
+    opacity: 0;
 }
 
 .photos ul li img {
     position: relative;
     object-fit: cover;
     /*max-width:calc(100%);*/
-    width:calc(100%);
-    height:330px;
+    width: calc(100%);
+    height: 330px;
     transition: .75s all;
-    float:left;
+    float: left;
 
     /*-webkit-background-size: cover;*/
     /*-moz-background-size: cover;*/
@@ -161,17 +77,17 @@ nav ul li a.inactive:hover {
     /*background-size: cover;*/
     /*background-repeat: no-repeat;*/
     /*background-position: 50% 50%;*/
-    overflow:hidden;
+    overflow: hidden;
 }
 
-.photos ul li.image:hover img{
+.photos ul li.image:hover img {
     -webkit-filter: brightness(65%);
     filter: brightness(65%);
 }
 
 .photos ul li.image:hover .pHolder {
     opacity: 1;
-    cursor:pointer;
+    cursor: pointer;
     -moz-transition: opacity .5s ease-in;
     -o-transition: opacity .5s ease-in;
     -webkit-transition: opacity .5s ease-in;
@@ -185,20 +101,19 @@ nav ul li a.inactive:hover {
     display: none;
 }
 
-
 .about {
     position: relative;
-    top:100px;
-    width:100%;
-    height:450px;
-    overflow:hidden;
+    top: 100px;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
 
     background-image: url('../img/profile2.jpg');
     background-size: cover;
     /*background-repeat: round;*/
     /*background-attachment: fixed;*/
     background-position: center;
-    margin-bottom:50px;
+    margin-bottom: 50px;
 }
 
 .about h1 {
@@ -210,10 +125,10 @@ nav ul li a.inactive:hover {
 .about #aboutText {
     background-color: #fff;
     opacity: 0.8;
-    width:40%;
+    width: 40%;
     float: right;
     position: relative;
-    right:10%;
+    right: 10%;
     top: 7%;
     padding-left: 20px;
     font-size: 19px;
@@ -222,16 +137,16 @@ nav ul li a.inactive:hover {
 .about img {
     position: absolute;
     /*float:left;*/
-    min-width:100%;
-    min-height:350px;
-    float:left;
+    min-width: 100%;
+    min-height: 350px;
+    float: left;
     /*clip: rect(0, 100px, 350px, 0);*/
 }
 
 .exposities {
-    width:720px;
+    width: 720px;
     position: relative;
-    top:80px;
+    top: 80px;
     font-family: "simplifica";
     padding-left: 160px;
 }
@@ -240,7 +155,7 @@ nav ul li a.inactive:hover {
     font-family: "simplifica";
     text-transform: uppercase;
     font-weight: bolder;
-    margin-bottom:20px;
+    margin-bottom: 20px;
 }
 
 .exposities ul {
@@ -248,15 +163,15 @@ nav ul li a.inactive:hover {
 }
 
 .exposities ul li {
-    padding-left:20px;
+    padding-left: 20px;
     float: left;
     list-style: none;
     width: 50%;
-    height:130px;
+    height: 130px;
 }
 
 .exposities ul li p {
-    margin:0;
+    margin: 0;
     font-size: 19px;
 }
 
@@ -266,7 +181,7 @@ nav ul li a.inactive:hover {
 
 .exposities ul li p a {
     text-decoration: none;
-    font-size:15px;
+    font-size: 15px;
 }
 
 .exposities ul li p a:hover {
@@ -277,10 +192,10 @@ nav ul li a.inactive:hover {
     width: 100%;
     text-align: center;
     position: relative;
-    top:120px;
+    top: 120px;
     font-family: "simplifica";
-    font-size:19px;
-    height:200px;
+    font-size: 19px;
+    height: 200px;
 }
 
 .contact h1 {
@@ -296,10 +211,8 @@ nav ul li a.inactive:hover {
     height: 100px;
     margin: 0 auto;
     text-indent: -9999px;
-    height:40px;
+    height: 40px;
 }
-
-
 
 .contact .facebookLink a:hover {
     background: url("../img/facebookHover.png") no-repeat scroll center center rgba(0, 0, 0, 0);
