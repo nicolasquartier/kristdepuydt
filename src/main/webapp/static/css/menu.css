@@ -65,15 +65,15 @@ nav ul li {
     padding: 10px 15px;
 }
 
-nav ul li a.active {
+nav ul li.active a {
     color: #989898;
 }
 
-nav ul li a.active:hover {
+nav ul li.active a:hover {
     text-decoration: none;
 }
 
-nav ul li a.inactive:hover {
+nav ul li a:hover {
     color: #989898;
     cursor: pointer;
 }
